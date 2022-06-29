@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = PageController(initialPage: 3);
+    final controller = PageController(initialPage: 0);
     return MaterialApp(
         theme: ThemeData(primaryColor: Colors.teal),
         debugShowCheckedModeBanner: false,
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
               OnBoardingPage(),
               OnBoardingPage2(),
               LoginPage(),
-              RegisterPage()
+              RegisterPage(),
             ],
           ),
         ));
