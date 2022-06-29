@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:internship_task1/pages/login_page.dart';
-import 'package:internship_task1/pages/on_boarding_page.dart';
+import 'package:internship_task1/pages/on_boarding_page1.dart';
+import 'package:internship_task1/pages/on_boarding_page2.dart';
 import 'package:internship_task1/pages/register_page.dart';
 
 void main() {
@@ -12,14 +13,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = PageController(initialPage: 0);
+    final controller = PageController(initialPage: 3);
     return MaterialApp(
         theme: ThemeData(primaryColor: Colors.teal),
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           body: PageView(
             controller: controller,
-            children: const [OnBoardingPage(), LoginPage(), RegisterPage()],
+            children: const [
+              OnBoardingPage(),
+              OnBoardingPage2(),
+              LoginPage(),
+              RegisterPage()
+            ],
           ),
         ));
   }
