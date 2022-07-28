@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:todo_application/presentation/add_task_screen.dart';
 import 'package:todo_application/presentation/shared_widgets/my_icon.dart';
 import 'package:todo_application/presentation/shared_widgets/my_icon_button.dart';
 import 'package:todo_application/presentation/shared_widgets/my_text.dart';
@@ -239,7 +240,12 @@ class _BoardScreenState extends State<BoardScreen> {
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20, bottom: 15),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AddTaskScreen()));
+            },
             style: ElevatedButton.styleFrom(
                 primary: const Color(0xFF25c06d),
                 shape: RoundedRectangleBorder(
